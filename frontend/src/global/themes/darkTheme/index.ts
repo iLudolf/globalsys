@@ -69,8 +69,8 @@ const darkTheme = {
   textWhite: '#FFFFFF',
 
   backgroundPrimary: '#ffff',
-  backgroundSecondary: '#ffff',
-  backgroundTertiary: '#ffff',
+  backgroundSecondary: '#f4f5f7',
+  backgroundTertiary: '#323238',
   backgroundSuccess: '#00875F',
   backgroundDanger: '#DAA520',
   backgroundWarning: '#dc3545',

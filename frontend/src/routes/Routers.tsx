@@ -27,6 +27,8 @@ const Routers = () => {
             element={<PrivateRoute component={Administration} />}
           />
 
+          <Route path="/info" element={<PrivateRoute component={System} />} />
+
           <Route path="/" element={<Home />} />
 
           <Route path="/" element={<Home />} />

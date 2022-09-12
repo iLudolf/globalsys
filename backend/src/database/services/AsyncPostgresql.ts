@@ -12,16 +12,10 @@ import {
 } from "../models/accounts/acc-profile-controls-model";
 
 import {
-    createTableGroups
-} from "../models/permissions/group-controls-model";
-
-import {
     RootAccount
 } from "./RootAccount";
 
-import {
-    createUsersTableGroups
-} from "../models/permissions/group-users-controls-model";
+
 
 class AsyncPostgresql {
     connectionString: string;
@@ -44,12 +38,9 @@ class AsyncPostgresql {
     public async syncPostgres(): Promise<void> {
         try {
             let poolOne = await this.connection();
-
-            createTableGroups.create(poolOne);
             createTableAccounts.create(poolOne);
             createTableAuthentications.create(poolOne);
             createTableProfile.create(poolOne);
-            createUsersTableGroups.create(poolOne);
             let root = new RootAccount();
             root.createRootAccount();
             poolOne.end();

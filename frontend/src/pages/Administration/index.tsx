@@ -34,8 +34,8 @@ interface IItemSelect {
 
 export const Administration = () => {
   const { logout } = useContext(AuthContext)
-  let isAdmin: boolean = false
-  isAdmin = localStorage.getItem('LUVEP_KAIZEN_STOREGE_ISADMIN') === 'true'
+  const isAdmin =
+    localStorage.getItem('GLOBAL_SYS_STOREGE_ISADMIN-1.0.0') === 'true'
 
   const [itemSelect, setItemSelect] = useState<IItemSelect>({
     id: 'conta',
@@ -47,6 +47,7 @@ export const Administration = () => {
 
   useEffect(() => {
     if (!isAdmin) {
+      console.log(isAdmin)
       history.push('/dashboard')
       window.location.reload()
     }

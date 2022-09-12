@@ -11,7 +11,7 @@ const Void = ({ descrpition, title }: Props) => {
     <Container>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="230"
+        width="180"
         data-name="Layer 1"
         viewBox="0 0 797.5 834.5"
       >

@@ -13,21 +13,23 @@ const fadeIn = keyframes`
 export const Container = styled.div`
   width: 100%;
   animation: 0.5s ease-out 0s 1 ${fadeIn};
-  background-image: url('./assets/background/FrameBlueTwo.png');
+  background-image: url('./assets/Svg/FrameBlueTwo.png');
   background-size: cover;
 `
 
 export const Navbar = styled.div`
   width: 100%;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  background: ${({ theme }) => theme.backgroundSecondary};
-  border-bottom: 1px solid ${({ theme }) => theme.background};
+  background: ${({ theme }) => theme.backgroundPrimary};
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0px 30px;
+  -webkit-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.14);
 
   @media screen and (max-width: 400px) {
     padding-top: 0.25rem;
@@ -55,16 +57,20 @@ export const OptionsSelected = styled.div`
   border-bottom: 4px solid #00528a;
   right: 100%;
 `
-
 export const TitleSelected = styled.a`
   text-decoration: none;
-  color: ${({ theme }) => theme.gray100};
+  color: ${({ theme }) => theme.gray800};
   font-weight: bold;
+
+  &:hover {
+    color: ${({ theme }) => theme.blue700};
+  }
 `
 
 export const Title = styled.a`
   text-decoration: none;
-  color: ${({ theme }) => theme.gray300};
+  color: ${({ theme }) => theme.gray500};
+  font-weight: bold;
 `
 
 export const GroupButton = styled.div`
@@ -118,11 +124,13 @@ export const TitleCardInfo = styled.h1`
   font-size: 35px;
   font-weight: bold;
   padding-right: 20px;
+  color: ${({ theme }) => theme.textTertiary};
 `
 
 export const DescriptionCardInfo = styled.p`
   color: ${({ theme }) => theme.gray200};
   font-size: 20px;
+  color: ${({ theme }) => theme.textTertiary};
 `
 
 export const Mascote = styled.img`
@@ -160,26 +168,18 @@ export const ReturnToLastClass = styled.a`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: rgb(9, 9, 10);
-  background: rgb(0, 52, 87);
-  background: linear-gradient(
-    90deg,
-    rgba(0, 52, 87, 1) 34%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  background: ${({ theme }) => theme.backgroundSecondary};
   border-radius: 10px;
   padding: 30px;
   text-decoration: none;
   color: ${({ theme }) => theme.gray100};
-  border: 1px transparent;
-
-  &:hover {
-    border: 1px solid ${({ theme }) => theme.backgroundInfo};
-  }
 
   @media screen and (max-width: 400px) {
     flex-direction: column;
   }
+  -webkit-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.14);
 `
 
 export const CardProfile = styled.div`
@@ -187,7 +187,9 @@ export const CardProfile = styled.div`
   height: 60vh;
   background-color: ${({ theme }) => theme.backgroundSecondary};
   border-radius: 10px;
-
+  -webkit-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.14);
   @media screen and (max-width: 400px) {
     width: 350px;
     height: 60vh;
@@ -213,7 +215,7 @@ export const CardHeader = styled.div`
 `
 
 export const CardProfileImage = styled.img`
-  border: 4px solid ${({ theme }) => theme.backgroundWhite};
+  border: 4px solid ${({ theme }) => theme.backgroundTertiary};
   padding: 4px;
   border-radius: 100%;
   width: 130px;
@@ -221,6 +223,7 @@ export const CardProfileImage = styled.img`
 export const NameProfile = styled.div`
   font-weight: bold;
   font-size: 20px;
+  color: ${({ theme }) => theme.textTertiary};
 `
 
 export const InforProfile = styled.span`
@@ -261,10 +264,11 @@ export const NameClass = styled.strong`
   margin: 0;
   padding: 0;
   font-size: 20px;
+  color: ${({ theme }) => theme.textQuinary};
 `
 
 export const DescriptionClass = styled.p`
-  color: ${({ theme }) => theme.textSecondary};
+  color: ${({ theme }) => theme.textQuinary};
   margin: 0;
   padding: 0;
 `
@@ -278,6 +282,8 @@ export const ReturnVideo = styled.div`
 export const TitleReturnVideo = styled.span`
   font-weight: bold;
   text-transform: uppercase;
+  color: ${({ theme }) => theme.textQuaternary};
+  padding-right: 10px;
 `
 
 export const GroupInfoProfile = styled.div`

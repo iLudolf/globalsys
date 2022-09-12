@@ -41,7 +41,7 @@ export const Pie = () => {
     <>
       {useStateloadData && <ModalLoading />}
       <Container>
-        <Title>Total de Kaizens</Title>
+        <Title>Total de atendimentos</Title>
         <Hr />
         {infoDashboard.length <= 0 && (
           <Group>

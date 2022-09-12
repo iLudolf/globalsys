@@ -61,7 +61,7 @@ export const Emphasis = styled.strong`
 export const FormGroup = styled.div`
   min-width: 400px;
   padding: 35px;
-  background-color: #f4f5f7;
+  background-color: ${({ theme }) => theme.backgroundSecondary};
   border-radius: 5px;
   -webkit-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.24);
   -moz-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.24);

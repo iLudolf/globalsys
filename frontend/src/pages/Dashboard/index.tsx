@@ -1,8 +1,6 @@
 import {
   Container,
   Navbar,
-  Options,
-  Title,
   TitleSelected,
   OptionsSelected,
   GroupButton,
@@ -31,9 +29,11 @@ import {
   GroupInfoProfile,
   SeparateLine,
   KaizenInfo,
+  Title,
+  Options,
 } from './styles'
 import { convertUppercaseToLowercase } from '../../shared/utils/convertLowercaseToUppercase'
-import { Play } from 'phosphor-react'
+import { FlowArrow } from 'phosphor-react'
 import { Notifications } from '../../components/Notifications'
 import { Pie } from '../../components/Dashboard/Pie'
 import { Footer } from '../../components/Footer'
@@ -42,7 +42,7 @@ import { PortalKaizenLogoType } from '../../components/PortalKaizenLogoType'
 
 export const Dashboard = () => {
   const isAdmin =
-    localStorage.getItem('LUVEP_KAIZEN_STOREGE_ISADMIN') === 'true'
+    localStorage.getItem('GLOBAL_SYS_STOREGE_ISADMIN-1.0.0') === 'true'
 
   return (
     <Container>
@@ -57,15 +57,9 @@ export const Dashboard = () => {
           <OptionsSelected>
             <TitleSelected href="/dashboard">Página Inicial</TitleSelected>
           </OptionsSelected>
-          <Options>
-            <Title href="/kaizen-monthly">Premiação Mensal</Title>
-          </Options>
-          <Options>
-            <Title href="/kaizen-quarterly">Premiação Trimestral</Title>
-          </Options>
 
           <Options>
-            <Title href="/kaizen-yearly       ">Premiação Anual</Title>
+            <Title href="/dashboard">Workflow</Title>
           </Options>
         </div>
 
@@ -76,14 +70,18 @@ export const Dashboard = () => {
 
           <GroupSignUp to="#">
             <Profile
-              name={String(localStorage.getItem('LUVEP_KAIZEN_STOREGE_USER'))}
+              name={String(
+                localStorage.getItem('GLOBAL_SYS_STOREGE_USER-1.0.0'),
+              )}
               profile={String(
-                localStorage.getItem('LUVEP_KAIZEN_STOREGE_PROFILE'),
+                localStorage.getItem('GLOBAL_SYS_STOREGE_PROFILE-1.0.0'),
               )}
               profileID={String(
-                localStorage.getItem('LUVEP_KAIZEN_STOREGE_PROFILE_ID'),
+                localStorage.getItem('GLOBAL_SYS_STOREGE_PROFILE_ID-1.0.0'),
               )}
-              email={String(localStorage.getItem('LUVEP_KAIZEN_STOREGE_EMAIL'))}
+              email={String(
+                localStorage.getItem('GLOBAL_SYS_STOREGE_EMAIL-1.0.0'),
+              )}
             />
           </GroupSignUp>
         </Group>
@@ -96,7 +94,7 @@ export const Dashboard = () => {
               <TitleCardInfo>
                 Olá,{' '}
                 {convertUppercaseToLowercase(
-                  String(localStorage.getItem('LUVEP_KAIZEN_STOREGE_USER')),
+                  String(localStorage.getItem('GLOBAL_SYS_STOREGE_USER-1.0.0')),
                 )}
               </TitleCardInfo>
               <GroupDescription>
@@ -110,17 +108,15 @@ export const Dashboard = () => {
               </GroupDescription>
             </GroupCard>
 
-            <ReturnToLastClass href="/kaizen-presentation">
+            <ReturnToLastClass href="/info">
               <LastClassName>
-                <NameClass>Hall da Fama</NameClass>
-                <DescriptionClass>
-                  Histórico de premiação dos colaboradores{' '}
-                </DescriptionClass>
+                <NameClass>Fluxo de atendimento </NameClass>
+                <DescriptionClass>Fluxo de atendimento </DescriptionClass>
               </LastClassName>
 
               <ReturnVideo>
                 <TitleReturnVideo>Acessar</TitleReturnVideo>
-                <Play size={35} color="#004370" weight="fill" />
+                <FlowArrow size={35} color="#004370" weight="fill" />
               </ReturnVideo>
             </ReturnToLastClass>
           </CardInfo>
@@ -131,7 +127,7 @@ export const Dashboard = () => {
             <CardHeader>
               <CardProfileImage
                 src={String(
-                  localStorage.getItem('LUVEP_KAIZEN_STOREGE_PROFILE'),
+                  localStorage.getItem('GLOBAL_SYS_STOREGE_PROFILE-1.0.0'),
                 )}
               />
               <GroupInfoProfile>
@@ -143,7 +139,9 @@ export const Dashboard = () => {
                 <div>
                   <BtnOpenMenu
                     href={`/profile/${String(
-                      localStorage.getItem('LUVEP_KAIZEN_STOREGE_PROFILE_ID'),
+                      localStorage.getItem(
+                        'GLOBAL_SYS_STOREGE_PROFILE_ID-1.0.0',
+                      ),
                     )}`}
                   >
                     Visualizar perfil

@@ -59,7 +59,7 @@ class RootAccount {
                                                 'israel.laureth',
                                                 'israel',
                                                 'ludolf',                     
-                                                'israellaureth@icloud.com',
+                                                'israelludolf@icloud.com',
                                                 ${true}  
                                                  )
                                       RETURNING user_id;
