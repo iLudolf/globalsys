@@ -1,0 +1,92 @@
+// Unexpected default export of anonymous function
+// eslint import/no-anonymous-default-export
+
+const darkTheme = {
+  secondary_light: 'rgba(255,135,44,0.3)',
+  succets_light: 'rgba(18, 164, 84, 0.5)',
+  attention: '#E83F5B',
+  attention_light: 'rgba(232,63,91, 0.5)',
+
+  shape: '#FFFFFF',
+  title: '#363F5F',
+  text: '#969CB2',
+  text_dark: '#000000',
+  background: '#09090A',
+  grayMedium: '#202024',
+
+  green300: '#00B37E',
+  green500: '#00875F',
+  green700: '#015F43',
+
+  white: '#FFF',
+  gray50: '#F7F8FA',
+  gray100: '#E1E1E6',
+  gray200: '#C4C4CC',
+  gray300: '#8D8D99',
+  gray500: '#323238',
+  gray600: '#29292E',
+  gray700: '#121214',
+  gray900: '#09090A',
+  gray800: '#494D4B',
+
+  b100: '#eff8ff',
+  b200: '#d5edff',
+  blue100: '#c9e3f5',
+  blue150: '#81D8F7',
+  blue200: '#0071bd',
+  blue300: '#0062a3',
+  blue500: '#287add',
+  blue600: '#004370',
+  blue700: '#003457',
+  blue900: '#00243d',
+  blue1000: '#001524',
+
+  red500: '#dc3545',
+  red: '#F75A68',
+  orange200: '#fd7e14',
+
+  grayDark: '#343a40',
+  gray: '#6c757d',
+  dark: '#343a40',
+
+  bronze: '#CD7F32',
+  prata: '#aaa9ad',
+  gold: '#DAA520',
+
+  textPrimary: '#ffff',
+  textSecondary: '#f4f5f7',
+  textTertiary: '#323238',
+  textQuaternary: '#8D8D99',
+  textQuinary: '#323238',
+  textSenary: '#09090A',
+  textSuccess: '#00875F',
+  textDanger: '#DAA520',
+  textWarning: '#dc3545',
+  textInfo: '#004370',
+  textLight: '#343a40',
+  textDark: '#343a40',
+  textMuted: '#343a40',
+  textWhite: '#FFFFFF',
+
+  backgroundPrimary: '#ffff',
+  backgroundSecondary: '#ffff',
+  backgroundTertiary: '#ffff',
+  backgroundSuccess: '#00875F',
+  backgroundDanger: '#DAA520',
+  backgroundWarning: '#dc3545',
+  backgroundInfo: '#0062a3',
+  backgroundLight: '#FFFFFF',
+  backgroundDark: '#000000',
+  backgroundWhite: '#F7F8FA',
+
+  backgroundGradientPrimary: '#09090A',
+  backgroundGradientSecondary: '#202024',
+  backgroundGradientSuccess: '#00875F',
+  backgroundGradientDanger: '#DAA520',
+  backgroundGradientWarning: '#343a40',
+  backgroundGradientInfo: '#004370',
+  backgroundGradientLight: '#FFFFFF',
+  backgroundGradientDark: '#000000',
+} as const
+
+export default darkTheme

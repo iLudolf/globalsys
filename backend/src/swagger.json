@@ -1,0 +1,77 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API Documentation - Calculation Chassi Vehicle",
+        "version": "1.0.0",
+        "description": "This is API application - At: 02/08/2022",
+        "license": {
+            "name": "MIT",
+            "url": "https://spdx.org/licenses/MIT.html"
+        },
+        "contact": {
+            "name": "Israe Ludolf",
+            "url": "https://www.linkedin.com/in/israelludolf",
+            "email": "israelludolf@icloud.com"
+        }
+    },
+    "servers": [
+        {
+            "url": " http://192.168.0.8:3001/api-docs"
+        }
+    ],
+    "paths": {
+        "/accounts": {
+            "post": {
+                "tags": ["Accounts"],
+                "sumary": "Create a account",
+                "description": "Create new account - Header [Authorization] is required",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "last_name": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    }
+                                },
+                                "example": {
+                                    "name": "Israel",
+                                    "last_name": "Ludolf",
+                                    "email": "israel.laureth@luvep.com.br"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "201":{
+                        "description": "Account created."
+                    }, 
+                    "500":{
+                        "description": "Account already exists."
+                    }
+                }
+            },
+            "get": {
+                "tags": ["Accounts"],
+                "sumary": "List all accounts",
+                "description": "Method for List all accounts - Header [Authorization] is required",              
+                "responses":{
+                    "201":{
+                        "description": "List all accounts."
+                    }, 
+                    "500":{
+                        "description": "Internal Server Error."
+                    }
+                }
+            }
+        }
+    }
+}
