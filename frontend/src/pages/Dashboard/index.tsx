@@ -41,8 +41,7 @@ import { Profile } from '../../components/Profile'
 import { PortalKaizenLogoType } from '../../components/PortalKaizenLogoType'
 
 export const Dashboard = () => {
-  const isAdmin =
-    localStorage.getItem('GLOBAL_SYS_STOREGE_ISADMIN-1.0.0') === 'true'
+  const isAdmin = localStorage.getItem('GLOBAL_SYS_STOREGE_ISADMIN') === 'true'
 
   return (
     <Container>
@@ -111,7 +110,7 @@ export const Dashboard = () => {
             <ReturnToLastClass href="/info">
               <LastClassName>
                 <NameClass>Fluxo de atendimento </NameClass>
-                <DescriptionClass>Fluxo de atendimento </DescriptionClass>
+                <DescriptionClass>Visualizar atendimentos </DescriptionClass>
               </LastClassName>
 
               <ReturnVideo>
@@ -154,7 +153,7 @@ export const Dashboard = () => {
               <KaizenInfo>
                 <div>
                   <BtnOpenMenu href={`/administration`}>
-                    Administração do portal Kaizen
+                    Administração do portal
                   </BtnOpenMenu>
                 </div>
               </KaizenInfo>

@@ -34,8 +34,7 @@ interface IItemSelect {
 
 export const Administration = () => {
   const { logout } = useContext(AuthContext)
-  const isAdmin =
-    localStorage.getItem('GLOBAL_SYS_STOREGE_ISADMIN-1.0.0') === 'true'
+  const isAdmin = localStorage.getItem('GLOBAL_SYS_STOREGE_ISADMIN') === 'true'
 
   const [itemSelect, setItemSelect] = useState<IItemSelect>({
     id: 'conta',
@@ -60,7 +59,7 @@ export const Administration = () => {
       setSpinner(true)
       const response = await api.get(`/accounts`, {
         headers: {
-          Authorization: localStorage.LUVEP_KAIZEN_STOREGE_KEY,
+          Authorization: localStorage.GLOBAL_SYS_STOREGE_KEY,
         },
       })
 
