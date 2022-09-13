@@ -69,18 +69,14 @@ export const Dashboard = () => {
 
           <GroupSignUp to="#">
             <Profile
-              name={String(
-                localStorage.getItem('GLOBAL_SYS_STOREGE_USER-1.0.0'),
-              )}
+              name={String(localStorage.getItem('GLOBAL_SYS_STOREGE_USER'))}
               profile={String(
-                localStorage.getItem('GLOBAL_SYS_STOREGE_PROFILE-1.0.0'),
+                localStorage.getItem('GLOBAL_SYS_STOREGE_PROFILE'),
               )}
               profileID={String(
-                localStorage.getItem('GLOBAL_SYS_STOREGE_PROFILE_ID-1.0.0'),
+                localStorage.getItem('GLOBAL_SYS_STOREGE_PROFILE_ID'),
               )}
-              email={String(
-                localStorage.getItem('GLOBAL_SYS_STOREGE_EMAIL-1.0.0'),
-              )}
+              email={String(localStorage.getItem('GLOBAL_SYS_STOREGE_EMAIL'))}
             />
           </GroupSignUp>
         </Group>
@@ -93,7 +89,7 @@ export const Dashboard = () => {
               <TitleCardInfo>
                 Olá,{' '}
                 {convertUppercaseToLowercase(
-                  String(localStorage.getItem('GLOBAL_SYS_STOREGE_USER-1.0.0')),
+                  String(localStorage.getItem('GLOBAL_SYS_STOREGE_USER')),
                 )}
               </TitleCardInfo>
               <GroupDescription>
@@ -125,9 +121,7 @@ export const Dashboard = () => {
           <CardProfile>
             <CardHeader>
               <CardProfileImage
-                src={String(
-                  localStorage.getItem('GLOBAL_SYS_STOREGE_PROFILE-1.0.0'),
-                )}
+                src={String(localStorage.getItem('GLOBAL_SYS_STOREGE_PROFILE'))}
               />
               <GroupInfoProfile>
                 <div>

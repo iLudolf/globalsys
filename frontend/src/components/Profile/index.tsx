@@ -26,7 +26,7 @@ interface Props {
 
 export const Profile = ({ profileID, name, profile, email }: Props) => {
   let isAdmin: boolean = false
-  isAdmin = localStorage.getItem('LUVEP_KAIZEN_STOREGE_ISADMIN') === 'true'
+  isAdmin = localStorage.getItem('GLOBAL_SYS_STOREGE_ISADMIN') === 'true'
 
   const useOnClickOutside = (ref: any, handler: any) => {
     useEffect(() => {

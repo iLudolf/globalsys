@@ -7,19 +7,24 @@ import {
   GroupSignUp,
   SignUp,
   Group,
-  Section,
-  CardInfo,
-  TitleCardInfo,
-  DescriptionCardInfo,
-  Person,
-  Card,
   Body,
+  Haader,
+  Conversations,
+  Message,
+  InfoConversations,
+  ProfileImage,
+  MessageCurrent,
+  Name,
+  Date,
+  AmountMessage,
+  InfoMessage,
+  InfoProfile,
 } from './styles'
 
 import { Footer } from '../../components/Footer'
 import { Logo } from '../../components/Logo'
 import { InstanceAttendance } from '../../components/InstanceAttendance'
-export const Home = () => {
+export const Chat = () => {
   return (
     <>
       <Container>
@@ -58,22 +63,27 @@ export const Home = () => {
           </Group>
         </Navbar>
         <Body>
-          <Section>
-            <Card>
-              <CardInfo>
-                <TitleCardInfo>Sistema de atendimento</TitleCardInfo>
-                <DescriptionCardInfo>
-                  Mande uma mensagem em nossos canais de atendimento e iremos
-                  responder o mais rápido possível.
-                </DescriptionCardInfo>
-              </CardInfo>
-              <Person src="./assets/Image/qa.png" />
-            </Card>
-          </Section>
+          <Haader></Haader>
+          <Group>
+            <Conversations>
+              <InfoConversations>
+                <ProfileImage src="https://github.com/iLudolf.png" />
+                <InfoProfile>
+                  <Name>Israel Ludolf</Name>
+                  <MessageCurrent>Text Message..</MessageCurrent>
+                </InfoProfile>
+                <InfoMessage>
+                  <Date>09:00</Date>
+                  <AmountMessage>5</AmountMessage>
+                </InfoMessage>
+              </InfoConversations>
+            </Conversations>
+            <Message></Message>
+          </Group>
         </Body>
+        <InstanceAttendance />
+        <Footer />
       </Container>
-      <InstanceAttendance />
-      <Footer />
     </>
   )
 }

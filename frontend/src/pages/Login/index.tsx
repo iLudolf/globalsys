@@ -78,7 +78,9 @@ export const Login = () => {
             Faça seu login na <Emphasis>plataforma</Emphasis> de{' '}
             <Emphasis>Atendimento</Emphasis> Globalsys
           </Title>
-          <InfoDescription>Robusto ferramenta de atendimento.</InfoDescription>
+          <InfoDescription>
+            Robusta ferramenta de gestão atendimentos.
+          </InfoDescription>
         </Info>
         <FormGroup>
           <FormTitle>Entrar</FormTitle>

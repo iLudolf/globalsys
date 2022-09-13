@@ -6,7 +6,7 @@ interface PropType {
 }
 
 const PrivateRoute: FC<PropType> = ({ component: Component }) => {
-  const isAuthenticated = !!localStorage.getItem('GLOBAL_SYS_STOREGE_KEY-1.0.0')
+  const isAuthenticated = !!localStorage.getItem('GLOBAL_SYS_STOREGE_KEY')
 
   if (isAuthenticated) return <Component />
   return <Navigate to="/account.login" />

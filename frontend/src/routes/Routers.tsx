@@ -13,7 +13,7 @@ import { Signup } from '../pages/Signup'
 import { Profile } from '../pages/Profile'
 import { AuthProvider } from '../contexts/AuthContext'
 import { System } from '../pages/System'
-
+import { Chat } from '../pages/Chat'
 import PrivateRoute from './PrivateRoute'
 import PublicRoute from './PublicRoute'
 
@@ -53,7 +53,7 @@ const Routers = () => {
           />
 
           <Route path="/system" element={<PrivateRoute component={System} />} />
-
+          <Route path="/chat" element={<Chat />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>

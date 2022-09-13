@@ -56,19 +56,18 @@ export const Container = styled.div`
 `
 
 export const Navbar = styled.div`
-  position: fixed;
   width: 100%;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  background: ${({ theme }) => theme.grayMedium};
-  border-bottom: 1px solid ${({ theme }) => theme.gray600};
+  background: ${({ theme }) => theme.backgroundPrimary};
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  justify-content: space-evenly;
-
-  filter: drop-shadow(0px 20px 16px #000);
+  justify-content: space-between;
+  height: 80px;
+  padding: 0px 30px;
+  -webkit-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.14);
 `
 
 export const GroupLog = styled.a`

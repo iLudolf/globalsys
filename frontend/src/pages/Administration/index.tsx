@@ -101,14 +101,14 @@ export const Administration = () => {
 
           <GroupSignUp to="#">
             <Profile
-              name={String(localStorage.getItem('LUVEP_KAIZEN_STOREGE_USER'))}
+              name={String(localStorage.getItem('GLOBAL_SYS_STOREGE_USER'))}
               profile={String(
-                localStorage.getItem('LUVEP_KAIZEN_STOREGE_PROFILE'),
+                localStorage.getItem('GLOBAL_SYS_STOREGE_PROFILE'),
               )}
               profileID={String(
-                localStorage.getItem('LUVEP_KAIZEN_STOREGE_PROFILE_ID'),
+                localStorage.getItem('GLOBAL_SYS_STOREGE_PROFILE_ID'),
               )}
-              email={String(localStorage.getItem('LUVEP_KAIZEN_STOREGE_EMAIL'))}
+              email={String(localStorage.getItem('GLOBAL_SYS_STOREGE_EMAIL'))}
             />
           </GroupSignUp>
         </Group>

@@ -65,7 +65,7 @@ const darkTheme = {
   textInfo: '#004370',
   textLight: '#343a40',
   textDark: '#343a40',
-  textMuted: '#343a40',
+  textMuted: '#8D8D99',
   textWhite: '#FFFFFF',
 
   backgroundPrimary: '#ffff',

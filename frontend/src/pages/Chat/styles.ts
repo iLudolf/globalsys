@@ -120,11 +120,6 @@ export const SignUp = styled.p`
   margin: 0px;
 `
 
-export const Group = styled.div`
-  display: flex;
-  flex-direction: row;
-`
-
 export const Section = styled.section`
   border-radius: 100px;
 `
@@ -161,7 +156,6 @@ export const Card = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  background-color: red;
   animation: 0.5s ease-out 0s 1 ${slideInFromLeft};
   background: rgb(40, 122, 221);
   background: rgb(0, 52, 87);
@@ -176,6 +170,84 @@ export const Card = styled.div`
 `
 // https://cssgradient.io/
 // https://webcode.tools/generators/css/drop-shadow
+
 export const Body = styled.main`
-  height: 70vh;
+  min-height: 80vh;
+  background-color: ${({ theme }) => theme.backgroundSecondary};
+`
+export const Haader = styled.header`
+  width: 100%;
+  height: 50px;
+`
+export const Group = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+`
+
+export const Conversations = styled.div`
+  width: 40%;
+  height: 100vh;
+  padding: 2px;
+`
+
+export const Message = styled.div`
+  width: 100%;
+  height: 100vh;
+  padding: 15px;
+`
+export const InfoConversations = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: ${({ theme }) => theme.backgroundPrimary};
+  border-top-left-radius: 10px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  padding: 13px;
+  border: 1px solid transparent;
+  &:hover {
+    border-bottom: 1px solid ${({ theme }) => theme.gray200};
+    cursor: pointer;
+  }
+`
+
+export const ProfileImage = styled.img`
+  width: 70px;
+  border-radius: 999px;
+`
+export const MessageCurrent = styled.span`
+  color: ${({ theme }) => theme.textMuted};
+`
+
+export const Name = styled.strong`
+  margin-bottom: 10px;
+`
+
+export const Date = styled.span`
+  font-size: 15px;
+  margin: 0;
+  margin-bottom: 10px;
+`
+
+export const AmountMessage = styled.span`
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 99px;
+  background-color: ${({ theme }) => theme.secondary_light};
+  margin: 0;
+  padding: 0;
+`
+export const InfoMessage = styled.div``
+
+export const InfoProfile = styled.div`
+  flex: 1;
+  align-items: flex-start;
+  padding-left: 10px;
 `
