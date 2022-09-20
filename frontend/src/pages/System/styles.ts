@@ -45,7 +45,7 @@ export const Button = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: ${({ theme }) => theme.blue500};
+    background-color: ${({ theme }) => theme.grayDark};
   }
 `
 
@@ -59,13 +59,15 @@ export const GroupChart = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: ${({ theme }) => theme.grayMedium};
+  background-color: ${({ theme }) => theme.backgroundSecondary};
   -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.28);
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.28);
   padding: 10px;
   margin-bottom: 40px;
   border-radius: 10px;
-  border: 1px solid ${({ theme }) => theme.gray500}; ;
+  -webkit-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.14);
 `
 
 export const Chart = styled.div`
@@ -76,7 +78,7 @@ export const Chart = styled.div`
 
 export const Title = styled.span`
   width: 100%;
-  color: ${({ theme }) => theme.gray200};
+  color: ${({ theme }) => theme.gray600};
   margin: 0;
   padding: 0;
   font-size: 18px;
@@ -88,15 +90,17 @@ export const Description = styled.p`
 
 export const Navbar = styled.div`
   width: 100%;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  background: ${({ theme }) => theme.grayMedium};
-  border-bottom: 1px solid ${({ theme }) => theme.gray600};
+  background: ${({ theme }) => theme.backgroundPrimary};
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   justify-content: space-between;
+  height: 80px;
+  padding: 0px 30px;
+  -webkit-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.14);
 
   @media screen and (max-width: 400px) {
     padding-top: 0.25rem;

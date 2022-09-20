@@ -28,7 +28,7 @@ import {
   TitleReturnVideo,
   GroupInfoProfile,
   SeparateLine,
-  KaizenInfo,
+  Info,
   Title,
   Options,
 } from './styles'
@@ -38,7 +38,7 @@ import { Notifications } from '../../components/Notifications'
 import { Pie } from '../../components/Dashboard/Pie'
 import { Footer } from '../../components/Footer'
 import { Profile } from '../../components/Profile'
-import { PortalKaizenLogoType } from '../../components/PortalKaizenLogoType'
+import { PortalLogoType } from '../../components/PortalLogoType'
 
 export const Dashboard = () => {
   const isAdmin = localStorage.getItem('GLOBAL_SYS_STOREGE_ISADMIN') === 'true'
@@ -46,7 +46,7 @@ export const Dashboard = () => {
   return (
     <Container>
       <Navbar>
-        <PortalKaizenLogoType
+        <PortalLogoType
           color={'#2058a4'}
           description={' Página Inicial'}
           url={'/dashboard'}
@@ -98,7 +98,7 @@ export const Dashboard = () => {
                 </DescriptionCardInfo>
 
                 <DescriptionCardInfo>
-                  Inspirar criatividade é respirar inovação.
+                  Construímos experiências e entregamos soluções.
                 </DescriptionCardInfo>
               </GroupDescription>
             </GroupCard>
@@ -144,13 +144,13 @@ export const Dashboard = () => {
             </CardHeader>
             <SeparateLine />
             {isAdmin && (
-              <KaizenInfo>
+              <Info>
                 <div>
                   <BtnOpenMenu href={`/administration`}>
                     Administração do portal
                   </BtnOpenMenu>
                 </div>
-              </KaizenInfo>
+              </Info>
             )}
           </CardProfile>
 

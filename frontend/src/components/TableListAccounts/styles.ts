@@ -25,7 +25,7 @@ export const List = styled.div`
     min-width: 600px;
 
     th {
-      background-color: ${({ theme }) => theme.gray600};
+      background-color: ${({ theme }) => theme.backgroundTertiary};
       padding: 1rem;
       text-align: left;
       color: ${({ theme }) => theme.gray100};
@@ -45,8 +45,8 @@ export const List = styled.div`
     }
 
     td {
-      background-color: ${({ theme }) => theme.gray700};
-      border-top: 4px solid ${({ theme }) => theme.background};
+      background-color: ${({ theme }) => theme.backgroundSecondary};
+      border-top: 4px solid ${({ theme }) => theme.backgroundSecondary};
       padding: 1rem;
       font-size: 0.875rem;
       line-height: 1.6;

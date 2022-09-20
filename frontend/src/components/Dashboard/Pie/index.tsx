@@ -46,7 +46,7 @@ export const Pie = () => {
         {infoDashboard.length <= 0 && (
           <Group>
             <Void
-              title="Nenhum Kaizen Registrado"
+              title="Nenhum atendimento Registrado"
               descrpition="No momento não existem métricas a serem exibidas"
             />
           </Group>

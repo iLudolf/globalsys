@@ -1,4 +1,4 @@
-import { PortalKaizenLogoType } from '../../components/PortalKaizenLogoType'
+import { PortalLogoType } from '../../components/PortalLogoType'
 import {
   Container,
   Header,
@@ -19,7 +19,7 @@ export const Forgot = () => {
         <FormGroup>
           <Form>
             <Info>
-              <PortalKaizenLogoType
+              <PortalLogoType
                 color={'#0071bd'}
                 description={''}
                 url={'/account.login'}

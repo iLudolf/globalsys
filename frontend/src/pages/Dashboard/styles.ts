@@ -98,8 +98,7 @@ export const Group = styled.div`
 `
 
 export const Section = styled.section`
-  margin-bottom: 15px;
-  min-height: 80vh;
+  min-height: 100%;
   padding: 50px;
 `
 
@@ -298,7 +297,7 @@ export const SeparateLine = styled.hr`
   border: 1px solid ${({ theme }) => theme.backgroundSecondary};
 `
 
-export const KaizenInfo = styled.p`
+export const Info = styled.p`
   color: ${({ theme }) => theme.textSecondary};
   padding: 25px;
 `

@@ -17,7 +17,7 @@ import {
 } from './styles'
 
 import { Notifications } from '../../components/Notifications'
-import { PortalKaizenLogoType } from '../../components/PortalKaizenLogoType'
+import { PortalLogoType } from '../../components/PortalLogoType'
 import { IAccount, TableListAccounts } from '../../components/TableListAccounts'
 import { api } from '../../services/api'
 import { ModalNewAccount } from '../../components/Modal/ModalNewAccount'
@@ -82,7 +82,7 @@ export const Administration = () => {
     <Container>
       {spinner && <ModalLoading />}
       <Navbar>
-        <PortalKaizenLogoType
+        <PortalLogoType
           color={'#2058a4'}
           description={'Administração Portal Kaizen'}
           url={'/dashboard'}
@@ -132,7 +132,7 @@ export const Administration = () => {
             </Element>
 
             <Element
-              href="/system"
+              href="/info"
               id={'infoSistem'}
               select={itemSelect.id}
               onClick={() =>

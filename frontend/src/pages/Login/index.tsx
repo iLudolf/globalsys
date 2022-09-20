@@ -19,7 +19,7 @@ import { DotLoaders } from '../../components/Loaders/DotLoaders'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
-import { PortalKaizenLogoType } from '../../components/PortalKaizenLogoType'
+import { PortalLogoType } from '../../components/PortalLogoType'
 
 const schema = yup
   .object({
@@ -68,7 +68,7 @@ export const Login = () => {
     <Container>
       <Header>
         <Info>
-          <PortalKaizenLogoType
+          <PortalLogoType
             color={'#0071bd'}
             description={`Soluções em TI`}
             url={`/`}

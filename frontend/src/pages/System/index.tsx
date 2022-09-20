@@ -19,20 +19,15 @@ import { Profile } from '../../components/Profile'
 import { ResponsiveLine } from '@nivo/line'
 import { ResponsivePie } from '@nivo/pie'
 import moment from 'moment'
-import { PortalKaizenLogoType } from '../../components/PortalKaizenLogoType'
+import { PortalLogoType } from '../../components/PortalLogoType'
 import { Notifications } from '../../components/Notifications'
 import { Footer } from '../../components/Footer'
-import { history } from '../../services/History'
-
 interface IMemoryRef {
   x: number
   y: number
 }
 
 export const System = () => {
-  let isAdmin: boolean = false
-  isAdmin = localStorage.getItem('LUVEP_KAIZEN_STOREGE_ISADMIN') === 'true'
-
   const [storage, setStorage] = useState({
     size: 0,
     date: '',
@@ -43,18 +38,10 @@ export const System = () => {
   const memoryRef = useRef<IMemoryRef[]>([])
 
   useEffect(() => {
-    if (!isAdmin) {
-      history.push('/dashboard')
-      window.location.reload()
-    }
-
     // Conexão
     const socket = io(`${process.env.REACT_APP_SOCKET_URL}`, {
       reconnectionDelayMax: 10000,
     })
-
-    // Enviar mensagem
-    // socket.emit("infoSistem", { some: "data" });
 
     socket.on('totalmem', (data: any) => {
       if (data.memoryUse !== undefined) {
@@ -94,7 +81,7 @@ export const System = () => {
     socket.on('cpu', (data: any) => {
       // setCpu(data);
     })
-  }, [isAdmin])
+  }, [])
 
   const dataPie = [
     {
@@ -124,7 +111,7 @@ export const System = () => {
     <>
       <Container>
         <Navbar>
-          <PortalKaizenLogoType
+          <PortalLogoType
             color={'#2058a4'}
             description={'Informações do Sistema'}
             url={'/dashboard'}
@@ -132,9 +119,7 @@ export const System = () => {
 
           <div>
             <Options>
-              <TitleNavBar href="/kaizen-yearly       ">
-                Página Inicial
-              </TitleNavBar>
+              <TitleNavBar href="/">Página Inicial</TitleNavBar>
             </Options>
           </div>
 
@@ -145,16 +130,14 @@ export const System = () => {
 
             <GroupSignUp to="#">
               <Profile
-                name={String(localStorage.getItem('LUVEP_KAIZEN_STOREGE_USER'))}
+                name={String(localStorage.getItem('GLOBAL_SYS_STOREGE_USER'))}
                 profile={String(
-                  localStorage.getItem('LUVEP_KAIZEN_STOREGE_PROFILE'),
+                  localStorage.getItem('GLOBAL_SYS_STOREGE_PROFILE'),
                 )}
                 profileID={String(
-                  localStorage.getItem('LUVEP_KAIZEN_STOREGE_PROFILE_ID'),
+                  localStorage.getItem('GLOBAL_SYS_STOREGE_PROFILE_ID'),
                 )}
-                email={String(
-                  localStorage.getItem('LUVEP_KAIZEN_STOREGE_EMAIL'),
-                )}
+                email={String(localStorage.getItem('GLOBAL_SYS_STOREGE_EMAIL'))}
               />
             </GroupSignUp>
           </Group>
@@ -288,7 +271,7 @@ export const System = () => {
                       {
                         on: 'hover',
                         style: {
-                          itemTextColor: '#fff',
+                          itemTextColor: '#343a40',
                         },
                       },
                     ],

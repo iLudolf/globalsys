@@ -29,7 +29,7 @@ export const Container = styled.div`
 export const Title = styled.h1`
   width: 100%;
   font-size: 60px;
-  color: ${({ theme }) => theme.textSecondary};
+  color: ${({ theme }) => theme.textTertiary};
   margin: 0;
   margin-top: 15px;
 

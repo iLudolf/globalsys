@@ -7,7 +7,7 @@ interface IPros {
   url?: string
 }
 
-export const PortalKaizenLogoType = ({ color, description, url }: IPros) => {
+export const PortalLogoType = ({ color, description, url }: IPros) => {
   return (
     <Container href={url}>
       <Logo />
