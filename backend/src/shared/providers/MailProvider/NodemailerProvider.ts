@@ -32,7 +32,7 @@ class NodemailerProvider implements IMailProvider {
                 return console.error(error);
             }
             if (success) {
-                console.log('\n\nConexão com Microsoft Exchange Server realizada com sucesso, o servidor está pronto para receber nossas mensagens\n');
+                console.log('\n\nConnection with Microsoft Exchange Server was successful, the server is ready to receive our messages\n');
             }
         });
 
@@ -56,7 +56,7 @@ class NodemailerProvider implements IMailProvider {
         const templateHTML = tamplateParse(variables);
 
         const message = await this.client.sendMail({
-            from: "nao-responda@luvep.com.br",
+            from: "nao-responda@gmail.com",
             to,
             subject,
             html: templateHTML,
