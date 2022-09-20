@@ -11,10 +11,11 @@ const fadeIn = keyframes`
   }
   `
 export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   animation: 0.5s ease-out 0s 1 ${fadeIn};
-  background-image: url('./assets/Svg/FrameBlueTwo.png');
-  background-size: cover;
 `
 
 export const Navbar = styled.div`
@@ -147,6 +148,7 @@ export const Card = styled.div`
 
 export const GroupDescription = styled.div`
   text-align: start;
+  margin-right: 5px;
   @media screen and (max-width: 400px) {
     display: none;
   }

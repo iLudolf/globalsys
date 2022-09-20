@@ -15,7 +15,6 @@ import {
 } from './styles'
 import { AuthContext } from '../../contexts/AuthContext'
 import { convertUppercaseToLowercase } from '../../shared/utils/convertLowercaseToUppercase'
-import { history } from '../../services/History'
 
 interface Props {
   name: string
@@ -54,11 +53,6 @@ export const Profile = ({ profileID, name, profile, email }: Props) => {
     window.location.reload()
   }
 
-  const handleGoPrOfile = () => {
-    history.push(`profile/${profileID}`)
-    window.location.reload()
-  }
-
   return (
     <>
       <Container onClick={() => setOpen(!open)} ref={node}>
@@ -74,8 +68,7 @@ export const Profile = ({ profileID, name, profile, email }: Props) => {
           </CardMessage>
 
           <ButtonGroup>
-            <Perfil onClick={handleGoPrOfile}>Perfil</Perfil>
-
+            <Perfil>Perfil</Perfil>
             <Button onClick={handleGoOutAccount}>Sair</Button>
           </ButtonGroup>
         </Modal>

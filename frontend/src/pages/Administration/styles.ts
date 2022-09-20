@@ -107,6 +107,9 @@ export const Options = styled.div`
 export const Title = styled.a`
   text-decoration: none;
   color: ${({ theme }) => theme.gray300};
+  &:hover {
+    color: ${({ theme }) => theme.gray500};
+  }
 `
 
 export const GroupButton = styled.div`

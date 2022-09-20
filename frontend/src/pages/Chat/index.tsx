@@ -5,7 +5,6 @@ import {
   Options,
   Title,
   GroupSignUp,
-  SignUp,
   Group,
   Body,
   Haader,
@@ -22,45 +21,41 @@ import {
 } from './styles'
 
 import { Footer } from '../../components/Footer'
-import { Logo } from '../../components/Logo'
-import { InstanceAttendance } from '../../components/InstanceAttendance'
+import { Profile } from '../../components/Profile'
+import { PortalLogoType } from '../../components/PortalLogoType'
+
 export const Chat = () => {
   return (
     <>
       <Container>
         <Navbar>
-          <Logo />
+          <PortalLogoType
+            color={'#2058a4'}
+            description={'Atendimentos'}
+            url={'/dashboard'}
+          />
           <div>
             <Options>
-              <Title href="/#">A Empresa</Title>
+              <Title href="/">Página Inicial</Title>
             </Options>
 
             <Options>
-              <Title href="/#">Serviços</Title>
-            </Options>
-
-            <Options>
-              <Title href="/#">Blog</Title>
-            </Options>
-
-            <Options>
-              <Title href="/#">Vagas</Title>
-            </Options>
-
-            <Options>
-              <Title href="/#">Portfólio</Title>
-            </Options>
-
-            <Options>
-              <Title href="/#">Parceiros</Title>
+              <Title href="/#">Workflow</Title>
             </Options>
           </div>
 
-          <Group>
-            <GroupSignUp to="/account.login">
-              <SignUp>Painel do Gestor</SignUp>
-            </GroupSignUp>
-          </Group>
+          <GroupSignUp to="#">
+            <Profile
+              name={String(localStorage.getItem('GLOBAL_SYS_STOREGE_USER'))}
+              profile={String(
+                localStorage.getItem('GLOBAL_SYS_STOREGE_PROFILE'),
+              )}
+              profileID={String(
+                localStorage.getItem('GLOBAL_SYS_STOREGE_PROFILE_ID'),
+              )}
+              email={String(localStorage.getItem('GLOBAL_SYS_STOREGE_EMAIL'))}
+            />
+          </GroupSignUp>
         </Navbar>
         <Body>
           <Haader></Haader>
@@ -81,7 +76,6 @@ export const Chat = () => {
             <Message></Message>
           </Group>
         </Body>
-        <InstanceAttendance />
         <Footer />
       </Container>
     </>

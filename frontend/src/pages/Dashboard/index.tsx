@@ -103,7 +103,7 @@ export const Dashboard = () => {
               </GroupDescription>
             </GroupCard>
 
-            <ReturnToLastClass href="/info">
+            <ReturnToLastClass href="/chat">
               <LastClassName>
                 <NameClass>Fluxo de atendimento </NameClass>
                 <DescriptionClass>Visualizar atendimentos </DescriptionClass>

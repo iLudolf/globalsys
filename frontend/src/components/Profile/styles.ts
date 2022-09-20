@@ -24,7 +24,7 @@ export const ImageIco = styled.img`
 export const Modal = styled.div<Props>`
   display: ${({ status }) => (status ? 'block' : 'none')};
   position: Absolute;
-  top: 120px;
+  top: 90px;
   right: 15px;
   width: 330px;
   border-radius: 5px;
@@ -32,7 +32,7 @@ export const Modal = styled.div<Props>`
   box-shadow: 1px 1px 16px -1px rgba(0, 0, 0, 0.23);
   padding: 2px;
   z-index: 2;
-  background-color: ${({ theme }) => theme.grayMedium};
+  background-color: ${({ theme }) => theme.backgroundSecondary};
 `
 
 export const CardMessage = styled.div`
@@ -46,13 +46,13 @@ export const CardMessage = styled.div`
 export const ProfileIco = styled.img`
   width: 75px;
   border-radius: 60px;
-  border: 2px solid ${({ theme }) => theme.gray100};
+  border: 2px solid ${({ theme }) => theme.textSenary};
   padding: 2px;
 `
 
 export const Name = styled.span`
   width: 100%;
-  color: ${({ theme }) => theme.shape};
+  color: ${({ theme }) => theme.textQuinary};
   margin: 0px;
   padding: 0px;
   font-size: 19px;

@@ -34,19 +34,16 @@ export const PlayIco = styled(Gear).attrs({
 `
 export const Button = styled.div`
   position: fixed;
-  bottom: 15%;
+  bottom: 5%;
   right: 100px;
   min-width: 200px;
   flex-direction: row;
   display: flex;
-
-  background-color: ${({ theme }) => theme.backgroundInfo};
   text-decoration: none;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: bold;
   border-radius: 100%;
-
   background-color: #287add;
   padding: 25px;
   padding-left: 20px;

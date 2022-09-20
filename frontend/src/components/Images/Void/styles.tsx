@@ -8,7 +8,7 @@ export const Container = styled.div`
 `
 
 export const Title = styled.h3`
-  color: ${({ theme }) => theme.gray200};
+  color: ${({ theme }) => theme.gray300};
   margin: 0;
   margin-top: 8px;
 `

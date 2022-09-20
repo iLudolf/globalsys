@@ -161,7 +161,6 @@ export const Card = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  background-color: red;
   animation: 0.5s ease-out 0s 1 ${slideInFromLeft};
   background: rgb(40, 122, 221);
   background: rgb(0, 52, 87);
@@ -176,6 +175,4 @@ export const Card = styled.div`
 `
 // https://cssgradient.io/
 // https://webcode.tools/generators/css/drop-shadow
-export const Body = styled.main`
-  height: 70vh;
-`
+export const Body = styled.main``

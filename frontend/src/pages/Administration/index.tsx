@@ -13,7 +13,6 @@ import {
   Space,
   Main,
   Element,
-  GenericSectionElement,
 } from './styles'
 
 import { Notifications } from '../../components/Notifications'
@@ -84,7 +83,7 @@ export const Administration = () => {
       <Navbar>
         <PortalLogoType
           color={'#2058a4'}
-          description={'Administração Portal Kaizen'}
+          description={'Administração Portal'}
           url={'/dashboard'}
         />
 
@@ -153,8 +152,6 @@ export const Administration = () => {
             <TableListAccounts accounts={accounts} />
             <ModalNewAccount />
           </div>
-
-          <GenericSectionElement id="infoSistem"></GenericSectionElement>
         </Main>
       </Section>
     </Container>

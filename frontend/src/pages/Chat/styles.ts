@@ -90,23 +90,12 @@ export const Title = styled.a`
 `
 
 export const GroupSignUp = styled(Link)`
-  text-decoration: none;
   display: flex;
   flex-direction: row;
   align-items: center;
   padding-left: 15px;
   padding-right: 15px;
-  background-color: #287add;
-  padding: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: 1px solid #2c7cdd;
-  border-radius: 5px;
   margin-left: 10px;
-  border-radius: 9999px;
-  &:hover {
-    background-color: #276fc6;
-  }
 `
 
 export const SignUp = styled.p`
@@ -172,7 +161,6 @@ export const Card = styled.div`
 // https://webcode.tools/generators/css/drop-shadow
 
 export const Body = styled.main`
-  min-height: 80vh;
   background-color: ${({ theme }) => theme.backgroundSecondary};
 `
 export const Haader = styled.header`
@@ -185,6 +173,11 @@ export const Group = styled.div`
   align-items: center;
   justify-content: space-between;
 `
+export const GroupConversations = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+`
 
 export const Conversations = styled.div`
   width: 40%;
@@ -196,6 +189,7 @@ export const Message = styled.div`
   width: 100%;
   height: 100vh;
   padding: 15px;
+  background-color: ${({ theme }) => theme.backgroundPrimary};
 `
 export const InfoConversations = styled.div`
   display: flex;
