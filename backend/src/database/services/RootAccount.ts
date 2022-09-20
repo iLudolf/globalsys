@@ -49,51 +49,49 @@ class RootAccount {
 
             let accounIsExists = await this.checkAccountAlreadyExists(postgresql);
 
-            return new Promise(async (resolve, reject) => {
-                try {
-                    if (!accounIsExists) {
+            try {
+                if (!accounIsExists) {
 
-                        let resultAccounts = await postgresql.query(`
-                                    INSERT INTO accounts (username, name, last_name, email, isAdmin)
-                                         VALUES (       
-                                                'israel.laureth',
-                                                'israel',
-                                                'ludolf',                     
-                                                'israelludolf@icloud.com',
-                                                ${true}  
-                                                 )
-                                      RETURNING user_id;
-                                                 `);
-
-                        const { rows }: QueryResult = resultAccounts!;
-
-                        let createPasswodHash = cryptoHashInstancia.hash('Global!', cryptoHashInstancia.createGenerateSalt(12));
-
-                        //acc_authentications
-                        await postgresql.query(`
-                                       INSERT INTO acc_authentications (salt, password, user_id)
-                                        VALUES (       
-                                                 '${createPasswodHash.salt}',
-                                                 '${createPasswodHash.hashedpassword}',
-                                                  ${rows[0].user_id}                                 
-                                                )
-                                               ;
+                    let resultAccounts = await postgresql.query(`
+                                INSERT INTO accounts (username, name, last_name, email, isAdmin)
+                                     VALUES (       
+                                            'israel.laureth',
+                                            'israel',
+                                            'ludolf',                     
+                                            'israelludolf@icloud.com',
+                                            ${true}  
+                                             )
+                                  RETURNING user_id;
                                              `);
-                        //acc_profiles
-                        await postgresql.query(`
-                                             INSERT INTO acc_profiles (photo, path, user_id)
-                                                     VALUES (       
-                                                              'profile.jpg',
-                                                              'default/profile.jpg',
-                                                               ${rows[0].user_id}                                 
-                                                             )
-                                                            ;
-                                                          `);
-                    }
-                } catch (error) {
-                    console.log(error)
+
+                    const { rows }: QueryResult = resultAccounts!;
+
+                    let createPasswodHash = cryptoHashInstancia.hash('Global!', cryptoHashInstancia.createGenerateSalt(12));
+
+                    //acc_authentications
+                    await postgresql.query(`
+                                   INSERT INTO acc_authentications (salt, password, user_id)
+                                    VALUES (       
+                                             '${createPasswodHash.salt}',
+                                             '${createPasswodHash.hashedpassword}',
+                                              ${rows[0].user_id}                                 
+                                            )
+                                           ;
+                                         `);
+                    //acc_profiles
+                    await postgresql.query(`
+                                         INSERT INTO acc_profiles (photo, path, user_id)
+                                                 VALUES (       
+                                                          'profile.jpg',
+                                                          'default/profile.jpg',
+                                                           ${rows[0].user_id}                                 
+                                                         )
+                                                        ;
+                                                      `);
                 }
-            })
+            } catch (error) {
+                console.log(error)
+            }
 
         } catch (error) {
             console.error(error)

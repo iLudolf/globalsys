@@ -24,7 +24,7 @@ export const Pie = () => {
   const loadData = async () => {
     try {
       setUseStateLoadData(true)
-      const response = await api.get('kaizens/dashboard')
+      const response = await api.get('calls/dashboard')
       const { message, error } = response.data
 
       if (!error) {

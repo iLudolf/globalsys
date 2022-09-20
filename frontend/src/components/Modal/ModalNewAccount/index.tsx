@@ -111,7 +111,7 @@ export const ModalNewAccount = () => {
       const response = await api.post('accounts', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
-          Authorization: localStorage.LUVEP_KAIZEN_STOREGE_KEY,
+          Authorization: localStorage.GLOBAL_SYS_STOREGE_KEY,
         },
       })
 

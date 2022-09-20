@@ -17,9 +17,7 @@ class CreateAccountsUseCases {
             return false;
         }
 
-        console.log({name, lastName})
-
-        let createPasswodHash = cryptoHashInstancia.hash('Luvep2022!', cryptoHashInstancia.createGenerateSalt(12));
+        let createPasswodHash = cryptoHashInstancia.hash('Global!', cryptoHashInstancia.createGenerateSalt(12));
         let password = String(createPasswodHash.hashedpassword);
         let salt = String(createPasswodHash.salt);
 
@@ -62,26 +60,26 @@ class CreateAccountsUseCases {
             })
         }
 
-        const templatePath = resolve(__dirname, "../", "../", "views", "emails", "sendForgotPassword.hbs")
-        let dateNow = new Date();
+        // const templatePath = resolve(__dirname, "../", "../", "views", "emails", "sendForgotPassword.hbs")
+        // let dateNow = new Date();
 
-        const variables = {
-            date: moment(dateNow).format('L'),
-            HeaderTitle: 'Sistema de Kaizen',
-            HeaderDescriptio: 'Compromisso, trabalho em equipe e melhoria contínua são chaves para conquistar excelência em qualidade e satisfação dos clientes.',
-            bodyTitle: `Olá ${name}, sua conta foi criada no portal Kaizen`,
-            bodyDescription: `Seu usuário é: ${name}.${lastName}`
-        }
+        // const variables = {
+        //     date: moment(dateNow).format('L'),
+        //     HeaderTitle: 'Plataforma de Atendimento Globalsys',
+        //     HeaderDescriptio: 'Construímos experiências e entregamos soluções.',
+        //     bodyTitle: `Olá ${name}, sua conta foi criada na plataforma de Atendimento Globalsys`,
+        //     bodyDescription: `Seu usuário é: ${name}.${lastName}`
+        // }
 
-        let attachments = [];
-        attachments = [{
-            filename: 'logo.png',
-            path: String(path.join(__dirname, "../", "../", "../", "../", "data", "default", 'logo.png')),
-            cid: 'logo',
-        }]
+        // let attachments = [];
+        // attachments = [{
+        //     filename: 'logo.png',
+        //     path: String(path.join(__dirname, "../", "../", "../", "../", "data", "default", 'logo.png')),
+        //     cid: 'logo',
+        // }]
 
-        let nodeMail = new NodemailerProvider();
-        nodeMail.sendMail(mail, 'Sistema de Kaizen', variables, templatePath, attachments);
+        // let nodeMail = new NodemailerProvider();
+        // nodeMail.sendMail(mail, 'Plataforma de Atendimento Globalsys', variables, templatePath, attachments);
 
         return true
     }

@@ -228,7 +228,7 @@ export const NameProfile = styled.div`
 `
 
 export const InforProfile = styled.span`
-  color: ${({ theme }) => theme.textSecondary};
+  color: ${({ theme }) => theme.textQuaternary};
   margin-top: 25px;
 `
 

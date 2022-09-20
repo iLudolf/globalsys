@@ -32,8 +32,7 @@ export const ModalDelete = ({ id, userName }: Props) => {
     try {
       const response = await api.delete(`accounts/${id}`, {
         headers: {
-          'Content-Type': 'application/json',
-          Authorization: localStorage.LUVEP_KAIZEN_STOREGE_KEY,
+          Authorization: localStorage.GLOBAL_SYS_STOREGE_KEY,
         },
       })
 

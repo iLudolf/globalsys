@@ -151,11 +151,6 @@ class PostgressAccountsRepository implements IAccountRepository {
                             RETURNING *;
                     `);
 
-                postgresql.query(`
-                    DELETE FROM group_users_controls
-                            WHERE user_id = ${id}
-                        ;`);
-
                 const { rows }: QueryResult = result!;
                 resolve(rows);
             } catch (error) {

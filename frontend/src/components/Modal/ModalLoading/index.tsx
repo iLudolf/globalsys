@@ -10,7 +10,7 @@ export const ModalLoading = () => {
           <Element>
             <Logo />
             <VerticalBar color={'#0071bd'} />
-            <Description>Portal Kaizen</Description>
+            <Description>Plataforma de Atendimento Globalsys</Description>
           </Element>
         </Group>
       </Container>

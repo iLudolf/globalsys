@@ -5,10 +5,10 @@ const slideInFromLeft = keyframes`
   border-right:8px solid #0071bd;
   }
   25% {
-    border-right: 8px solid #CD7F32;
+    border-right: 8px solid #0094d9;
   }
   45% {
-    border-right: 8px solid #aaa9ad;
+    border-right: 8px solid #504e4f;
   }
   100% {
     border-right:8px solid #DAA520;
@@ -43,7 +43,7 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: ${({ theme }) => theme.grayMedium};
+  background-color: ${({ theme }) => theme.backgroundPrimary};
 `
 
 export const Group = styled.div`
@@ -73,13 +73,7 @@ export const VerticalBar = styled.div<Props>`
 `
 
 export const Description = styled.span`
-  font-family: Roboto-Light;
   padding-left: 10px;
   font-size: 22px;
-  color: ${({ theme }) => theme.gray50};
-
-  @font-face {
-    font-family: Roboto-Light;
-    src: url('./assets/Fonts/Roboto/Roboto-Light.ttf');
-  }
+  color: ${({ theme }) => theme.textQuinary};
 `
