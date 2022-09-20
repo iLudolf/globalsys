@@ -47,7 +47,3 @@ class SistemInfoRepository implements ISistemInfoRepository {
 }
 
 export { SistemInfoRepository };
-
-
-// https://www.geeksforgeeks.org/node-js-os-loadavg-method/
-// https://stackoverflow.com/questions/36816181/get-view-memory-cpu-usage-via-nodejs

@@ -1,5 +1,3 @@
-import { SistemInfo } from "../entities/SistemInfo";
-
 interface ISistemInfoDTO {
     sizeStorage?: number; 
 }

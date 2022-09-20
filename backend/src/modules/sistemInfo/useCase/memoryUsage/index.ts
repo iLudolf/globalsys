@@ -1,5 +1,5 @@
 import { MemoryUsageCasesUseCases } from "./MemoryUsageCases";
-import { MemoryUsageController } from "./memoryUsageController";
+import { MemoryUsageController } from "./MemoryUsageController";
 import { SistemInfoRepository } from "../../repositories/SistemInfoRepository";
 
 export default (): MemoryUsageController => {

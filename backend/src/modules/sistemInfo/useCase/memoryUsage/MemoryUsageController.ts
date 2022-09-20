@@ -1,4 +1,3 @@
-import { AppError } from "../../../../errors/AppError";
 import { MemoryUsageCasesUseCases } from "./MemoryUsageCases";
 
 class MemoryUsageController {
@@ -10,9 +9,7 @@ class MemoryUsageController {
 
         setInterval(async () => {
             let usedMemory = await this.memoryUsageCases.execute();
-            cont = cont + 1;
-            // if (cont >= 10) cont = 0;
-
+            cont = cont + 1; 
             return socket.emit("totalmem", {
                 id: cont,
                 memoryUse: (100 - usedMemory)

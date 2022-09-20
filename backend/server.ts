@@ -25,13 +25,13 @@ class Server {
     this.app = express();
   }
 
-  public createServer(): void {   
+  public createServer(): void {
 
     const app: Express = express();
     const port = (process.env.APP_PORT || 3001);
     const host = (process.env.APP_HOSTNAME || "localhost");
 
-    express.urlencoded({ extended: false });   
+    express.urlencoded({ extended: false });
 
     app.use(express.json());
     app.use((req, res, next) => {
@@ -41,10 +41,8 @@ class Server {
       app.use(cors());
       next();
     });
-
     app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerFile));
     app.use(router);
-    
     app.use((
       err: Error,
       request: express.Request,
@@ -63,16 +61,12 @@ class Server {
         message: `Internal server error - ${err.message}`
       })
     })
-   
     storage.sync();
     router.use('/storage/', express.static(path.join(__dirname, 'src/data')));
-
-    postgresql.syncPostgres(); 
-
+    postgresql.syncPostgres();
     app.listen(port, () => {
       console.info(`\n\n⚡️[server]: Server is running at http://${host}:${port}`);
     });
-
     this.createSocket(app, 3003);
   }
 
